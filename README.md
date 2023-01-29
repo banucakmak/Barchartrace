@@ -1,8 +1,8 @@
 # Barchartrace
 
-Welcome to my repository on bar chart races! Here you will find a collection of codes that I have applied while learning from my bootcamp teacher about the process of creating these dynamic animations. These codes are focused on creating simple and easy-to-use bar chart races, and are suitable for a wide range of applications. You will find that the codes are simple and easy to understand, making them a great starting point for anyone who wants to learn how to create bar chart races. The repository includes a sample dataset to help you get started with creating your own bar chart races. I hope that these codes will be useful for anyone who is interested in learning about this topic and creating similar animations. Thanks for visiting and happy coding!
+##Welcome to my repository on bar chart races! Here you will find a collection of codes that I have applied while learning from my bootcamp teacher about the process of creating these dynamic animations. These codes are focused on creating simple and easy-to-use bar chart races, and are suitable for a wide range of applications. You will find that the codes are simple and easy to understand, making them a great starting point for anyone who wants to learn how to create bar chart races. The repository includes a sample dataset to help you get started with creating your own bar chart races. I hope that these codes will be useful for anyone who is interested in learning about this topic and creating similar animations. Thanks for visiting and happy coding!
 --------------------------------
-# installing the necessary packages
+### installing the necessary packages
 
 !pip install ffmpeg  
 
@@ -11,25 +11,33 @@ Welcome to my repository on bar chart races! Here you will find a collection of 
 !pip install bar_chart_race 
 
 (a package that allows you to create bar chart races in Python. It is built on top of the popular data visualization library, matplotlib. It makes it easy to create bar chart races by providing a simple and intuitive API for generating the animations.)
+
 ------------
 import pandas as pd
 
 df=pd.read_csv("corona_dat.csv") 
----A dataset about corona virus status of the countries.---
+### A dataset about corona virus status of the countries.
+
 df.head()
 ![image](https://user-images.githubusercontent.com/122751581/215353454-8829fef7-bf66-418e-b1f1-ecd85091095d.png)
----Selecting the countries to include the race)
+
+###Selecting the countries to include the race)
 df2=df[['date','China','Italy','Spain','Brazil','United Kingdom','US','France','Turkey']]
 ---------------
+###To set index of the dataframe to the "date" column to be able to do time based operations on the data as we can use the column to filter and sort the data.
+
 df2.set_index('date',inplace=True)
-To set index of the dataframe to the "date" column to be able to do time based operations on the data as we can use the column to filter and sort the data.
+
 ------------
+###Adding up the previous value in the cumulative sum with the current element.
+
 total=df2.cumsum(axis=0) 
-Adding up the previous value in the cumulative sum with the current element.
+
 ------------
+###python library for creating  animated bar chart races.
+
 import bar_chart_race as bcr
 
-python library for creating  animated bar chart races.
 -------------
 bcr.bar_chart_race(total,filename="covid.mp4",figsize=(8,5),title="Barchart")
 
@@ -44,6 +52,7 @@ HTML("""
 """ % data_url)
 
 
-https://user-images.githubusercontent.com/122751581/215354135-2ac4d38b-f5ae-4227-b8e8-65713b60ddd2.mp4
+https://user-images.githubusercontent.com/122751581/215354459-a484b9ad-3be7-4ff3-a07a-35f384652091.mp4
+
 
 
