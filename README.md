@@ -62,6 +62,15 @@ HTML("""
 
 https://user-images.githubusercontent.com/122751581/215354731-b724ef06-d9bf-4669-8b5f-33f39ac13541.mp4
 
+If you cannot play the video, check the shots!
+
+![image](https://user-images.githubusercontent.com/122751581/215354807-c7cb7a38-0846-473b-8733-3176d6abf960.png)
+
+![image](https://user-images.githubusercontent.com/122751581/215354822-a68892ac-c59c-4c32-bfec-090927d97c65.png)
+
+![image](https://user-images.githubusercontent.com/122751581/215354833-5892a8a9-87d0-4b8e-bfab-dc34137edc9d.png)
+
+
 
 
 
