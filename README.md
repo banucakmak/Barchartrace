@@ -1,6 +1,6 @@
 # Barchartrace
 
-##Welcome to my repository on bar chart races! Here you will find a collection of codes that I have applied while learning from my bootcamp teacher about the process of creating these dynamic animations. These codes are focused on creating simple and easy-to-use bar chart races, and are suitable for a wide range of applications. You will find that the codes are simple and easy to understand, making them a great starting point for anyone who wants to learn how to create bar chart races. The repository includes a sample dataset to help you get started with creating your own bar chart races. I hope that these codes will be useful for anyone who is interested in learning about this topic and creating similar animations. Thanks for visiting and happy coding!
+## Welcome to my repository on bar chart races! Here you will find a collection of codes that I have applied while learning from my bootcamp teacher about the process of creating these dynamic animations. These codes are focused on creating simple and easy-to-use bar chart races, and are suitable for a wide range of applications. You will find that the codes are simple and easy to understand, making them a great starting point for anyone who wants to learn how to create bar chart races. The repository includes a sample dataset to help you get started with creating your own bar chart races. I hope that these codes will be useful for anyone who is interested in learning about this topic and creating similar animations. Thanks for visiting and happy coding!
 --------------------------------
 ### installing the necessary packages
 
@@ -21,20 +21,21 @@ df=pd.read_csv("corona_dat.csv")
 df.head()
 ![image](https://user-images.githubusercontent.com/122751581/215353454-8829fef7-bf66-418e-b1f1-ecd85091095d.png)
 
-###Selecting the countries to include the race)
+### Selecting the countries to include the race
+
 df2=df[['date','China','Italy','Spain','Brazil','United Kingdom','US','France','Turkey']]
 ---------------
-###To set index of the dataframe to the "date" column to be able to do time based operations on the data as we can use the column to filter and sort the data.
+### To set index of the dataframe to the "date" column to be able to do time based operations on the data as we can use the column to filter and sort the data.
 
 df2.set_index('date',inplace=True)
 
 ------------
-###Adding up the previous value in the cumulative sum with the current element.
+### Adding up the previous value in the cumulative sum with the current element.
 
 total=df2.cumsum(axis=0) 
 
 ------------
-###python library for creating  animated bar chart races.
+### python library for creating  animated bar chart races.
 
 import bar_chart_race as bcr
 
