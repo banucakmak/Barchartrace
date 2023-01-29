@@ -27,6 +27,7 @@ df.head()
 ### Selecting the countries to include the race
 
 df2=df[['date','China','Italy','Spain','Brazil','United Kingdom','US','France','Turkey']]
+
 ---------------
 ### To set index of the dataframe to the "date" column to be able to do time based operations on the data as we can use the column to filter and sort the data.
 
@@ -43,6 +44,9 @@ total=df2.cumsum(axis=0)
 import bar_chart_race as bcr
 
 -------------
+
+### the main code
+
 bcr.bar_chart_race(total,filename="covid.mp4",figsize=(8,5),title="Barchart")
 
 from IPython.display import HTML 
